@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 200);
+            $table->enum('type', ['F', 'J'])->default('F');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
