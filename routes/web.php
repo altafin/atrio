@@ -17,6 +17,12 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+
+    Route::get('/clients', \App\Livewire\Clients\Index::class)->name('clients.index');
+    Route::get('/clients/create', \App\Livewire\Clients\Create::class)->name('clients.create');
+    Route::get('/clients/show/{client}', \App\Livewire\Clients\Show::class)->name('clients.show');
+    Route::get('/clients/update/{client}', \App\Livewire\Clients\Edit::class)->name('clients.edit');
+
 });
 
 require __DIR__.'/auth.php';
