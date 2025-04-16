@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\Clients;
+namespace App\Livewire\Actions\Clients;
 
 use App\Livewire\Forms\ClientForm;
 use App\Models\Client;
 use Livewire\Component;
 
-class Edit extends Component
+class Show extends Component
 {
     public ClientForm $form;
 
@@ -15,15 +15,8 @@ class Edit extends Component
         $this->form->setClientModel($client);
     }
 
-    public function save()
-    {
-        $this->form->update();
-
-        return $this->redirectRoute('clients.index', navigate: true);
-    }
-
     public function render()
     {
-        return view('livewire.client.edit');
+        return view('livewire.client.show', ['client' => $this->form->clientModel]);
     }
 }

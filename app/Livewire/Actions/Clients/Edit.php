@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\Clients;
+namespace App\Livewire\Actions\Clients;
 
 use App\Livewire\Forms\ClientForm;
 use App\Models\Client;
 use Livewire\Component;
 
-class Create extends Component
+class Edit extends Component
 {
     public ClientForm $form;
 
@@ -17,13 +17,13 @@ class Create extends Component
 
     public function save()
     {
-        $this->form->store();
+        $this->form->update();
 
         return $this->redirectRoute('clients.index', navigate: true);
     }
 
     public function render()
     {
-        return view('livewire.client.create');
+        return view('livewire.client.edit');
     }
 }

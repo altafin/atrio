@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Clients;
+namespace App\Livewire\Actions\Clients;
 
 use App\Models\Client;
 use Illuminate\View\View;
