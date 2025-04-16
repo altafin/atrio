@@ -16,7 +16,7 @@
                         </div>
                     </div>
 
-                    <div class="flow-root">
+                    <div class="flow-root ml-4">
                         <div class="mt-8 overflow-x-auto">
                             <div class="max-w-xl py-2 align-middle">
                                 <form method="POST" wire:submit="save" role="form" enctype="multipart/form-data">

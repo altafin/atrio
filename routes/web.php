@@ -21,7 +21,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/clients', \App\Livewire\Clients\Index::class)->name('clients.index');
     Route::get('/clients/create', \App\Livewire\Clients\Create::class)->name('clients.create');
     Route::get('/clients/show/{client}', \App\Livewire\Clients\Show::class)->name('clients.show');
-    Route::get('/clients/update/{client}', \App\Livewire\Clients\Edit::class)->name('clients.edit');
+    Route::get('/clients/edit/{client}', \App\Livewire\Clients\Edit::class)->name('clients.edit');
 
 });
 

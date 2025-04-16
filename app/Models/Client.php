@@ -31,5 +31,9 @@ class Client extends Model
      */
     protected $fillable = ['name', 'type'];
 
+    protected $attributes = [
+        'type' => 'F',
+    ];
+
 
 }

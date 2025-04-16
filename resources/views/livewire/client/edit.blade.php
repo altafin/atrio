@@ -1,4 +1,19 @@
 <section class="w-full">
+
+    <div class="relative mb-6 w-full">
+        <flux:heading size="xl" level="1">{{ __('Cliente') }}</flux:heading>
+        <flux:subheading size="lg" class="mb-6">{{ __('Atualização dos dados cadastrais do cliente') }}</flux:subheading>
+        <flux:separator variant="subtle" />
+    </div>
+
+    <x-clients.layout :heading="__('Cliente')" :subheading="__('Atualizar dados do cliente')">
+
+    </x-clients.layout>
+</section>
+
+
+<!--
+<section class="w-full">
     <div class="relative mb-6 w-full">
         <flux:heading size="xl" level="1">{{ __('Clients') }}</flux:heading>
         <flux:subheading size="lg" class="mb-6">Update existing {{ __('Client') }}</flux:subheading>
@@ -32,3 +47,4 @@
         </div>
     </div>
 </section>
+-->
